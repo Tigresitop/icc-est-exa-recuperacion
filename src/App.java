@@ -1,4 +1,5 @@
 
+import Controllers.PersonaController;
 import Models.Persona;
 
 public class App {
@@ -35,6 +36,57 @@ public class App {
                                 new Persona("Lorena", 23),
                                 new Persona("Miguel", 52)
                 };
+
+        PersonaController controller = new PersonaController();
+        System.out.println("=================================  1  =================================");
+        controller.ordenarPorEdadDescendente(personas);
+        System.out.println("Ordenado por edad descendente:");
+        controller.imprimirArreglo(personas);
+
+        System.out.println("=======================================================================");
+        System.out.println("Buscar por edad 25:");
+        int posicion = controller.buscarPorEdad(personas, 25);
+        if (posicion != -1) {
+        System.out.println("Encontrado: " + personas[posicion] + " en la posición " + posicion);
+        } else {
+        System.out.println("No encontrado.");
+        }
+        System.out.println("=======================================================================");
+
+        System.out.println("Buscar por edad 70:");
+        posicion = controller.buscarPorEdad(personas, 70);
+        if (posicion != -1) {
+        System.out.println("Encontrado: " + personas[posicion] + " en la posición " + posicion);
+        } else {
+        System.out.println("No encontrado.");
+        }
+        System.out.println("=================================  2  ==================================");
+
+        
+        controller.ordenarPorNombreAscendente(personas);
+        System.out.println("Ordenado por nombre ascendente:");
+        controller.imprimirArreglo(personas);
+        System.out.println("=======================================================================");
+        
+        System.out.println("Buscar por nombre Anais:");
+        posicion = controller.buscarPorNombre(personas, "Anais");
+        if (posicion != -1) {
+        System.out.println("Encontrado: " + personas[posicion] + " en la posición " + posicion);
+        } else {
+        System.out.println("No encontrado.");
+        }
+        System.out.println("=======================================================================");
+
+        System.out.println("Buscar por nombre Miguel:");
+        posicion = controller.buscarPorNombre(personas, "Miguel");
+        if (posicion != -1) {
+        System.out.println("Encontrado: " + personas[posicion] + " en la posición " + posicion);
+        } else {
+        System.out.println("No encontrado.");
+        }
+        System.out.println("=======================================================================");
+
+
 
                 /// TODOS los métodos deben ser implementados en la clase PersonaController
                 // Crear una instancia de la clase PersonaController y llamar a los métodos
