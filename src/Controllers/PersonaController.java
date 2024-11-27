@@ -22,7 +22,6 @@ public class PersonaController {
                     maxIndex = j;
                 }
             }
-            // Intercambio de elementos
             Persona temp = personas[i];
             personas[i] = personas[maxIndex];
             personas[maxIndex] = temp;

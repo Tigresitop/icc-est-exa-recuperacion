@@ -51,7 +51,7 @@ public class App {
         } else {
         System.out.println("No encontrado.");
         }
-        System.out.println("=======================================================================");
+        System.out.println("");
 
         System.out.println("Buscar por edad 70:");
         posicion = controller.buscarPorEdad(personas, 70);
@@ -75,7 +75,7 @@ public class App {
         } else {
         System.out.println("No encontrado.");
         }
-        System.out.println("=======================================================================");
+        System.out.println("");
 
         System.out.println("Buscar por nombre Miguel:");
         posicion = controller.buscarPorNombre(personas, "Miguel");
